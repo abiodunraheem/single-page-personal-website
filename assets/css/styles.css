@@ -1,10 +1,23 @@
-/*=============== GOOGLE FONTS ===============*/
+/* =============== GOOGLE FONTS =============== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--hue), 8%, 66%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: hsl(var(--hue), 8%, 54%);
+}
+
+/* =============== VARIABLES CSS =============== */
 :root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+  /* ========== Colors ========== */
+
+  /* Color mode HSL(hue, saturation, lightness) */
+
   /*
       Blue: hsl(207, 90%, 61%)
       Purple: hsl(250, 66%, 75%)
@@ -15,7 +28,6 @@
   --hue: 207;
   --sat: 90%;
   --lig: 61%;
-  
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
   --title-color: hsl(var(--hue), 12%, 15%);
@@ -25,14 +37,15 @@
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: #fff;
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  /* ========== Font and typography ========== */
+
+  /* .5rem = 8px | 1rem = 16px ... */
   --body-font: 'Poppins', sans-serif;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 }
 
 @media screen and (min-width: 968px) {
@@ -40,12 +53,12 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
-/*=============== BASE ===============*/
+/* =============== BASE =============== */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -57,10 +70,12 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s; /* For animation dark mode */
+  transition: 0.3s; /* For animation dark mode */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: 600;
 }
@@ -78,7 +93,7 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
+/* =============== THEME =============== */
 .change-theme {
   position: absolute;
   top: 1.5rem;
@@ -86,14 +101,14 @@ img {
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .change-theme:hover {
   color: var(--first-color);
 }
 
-/*========== Variables Dark theme ==========*/
+/* ========== Variables Dark theme ========== */
 body.dark-theme {
   --title-color: hsl(var(--hue), 12%, 95%);
   --text-color: hsl(var(--hue), 12%, 75%);
@@ -101,10 +116,20 @@ body.dark-theme {
   --container-color: hsl(var(--hue), 24%, 12%);
 }
 
-/*========== 
-    Color changes in some parts of 
+.filters__content {
+  margin: 2rem 0 2.5rem;
+  background-color: var(--text-color-lighten);
+  padding: 0.375rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+}
+
+/* ==========
+    Color changes in some parts of
     the website, in light theme
-==========*/
+========== */
 .dark-theme .button__grey {
   background-color: var(--container-color);
 }
@@ -129,7 +154,7 @@ body.dark-theme {
   background-color: hsl(var(--hue), 8%, 32%);
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/* =============== REUSABLE CSS CLASSES =============== */
 .container {
   max-width: 968px;
   margin-left: 1.5rem;
@@ -141,7 +166,7 @@ body.dark-theme {
   gap: 1.5rem;
 }
 
-/*=============== PROFILE ===============*/
+/* =============== PROFILE =============== */
 .profile {
   position: relative;
   padding-top: 3.5rem;
@@ -156,12 +181,15 @@ body.dark-theme {
   text-align: center;
 }
 
-
 .profile__perfil {
   width: 100px;
   height: 100px;
-  background: linear-gradient(180deg, hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
-  hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
+  background:
+    linear-gradient(
+      180deg,
+      hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
+      hsla(var(--hue), var(--sat), var(--lig), 0.2) 100%
+    );
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -181,7 +209,7 @@ body.dark-theme {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .profile__name {
@@ -198,14 +226,13 @@ body.dark-theme {
 .profile__social {
   display: flex;
   justify-content: center;
-  column-gap: .75rem;
+  column-gap: 0.75rem;
 }
-
 
 .profile__social-link {
   font-size: 1.25rem;
   color: var(--title-color);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .profile__social-link:hover {
@@ -224,14 +251,13 @@ body.dark-theme {
 
 .profile__info-number {
   font-size: var(--normal-font-size);
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .profile__info-description {
   font-size: var(--smaller-font-size);
   font-weight: 500;
 }
-
 
 .profile__buttons,
 .profile__buttons-small {
@@ -245,24 +271,21 @@ body.dark-theme {
 }
 
 .profile__buttons-small {
-  column-gap: .25rem;
+  column-gap: 0.25rem;
 }
 
-/*=============== BUTTONS ===============*/
+/* =============== BUTTONS =============== */
 .button {
   display: inline-flex;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
+  font-size: 1.25rem;
   background-color: var(--first-color);
   color: #fff;
   padding: 1.15rem 1.5rem;
-  border-radius: .5rem;
-  transition: .3s;
-  box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
-}
-
-.button {
-  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), 0.25);
 }
 
 .button:hover {
@@ -270,7 +293,7 @@ body.dark-theme {
 }
 
 .button__small {
-  padding: .74rem;
+  padding: 0.74rem;
   box-shadow: none;
 }
 
@@ -284,16 +307,7 @@ body.dark-theme {
 }
 
 
-/*=============== FILTERS TABS ===============*/
-.filters__content {
-  margin: 2rem 0 2.5rem;
-  background-color: var(--text-color-lighten);
-  padding: .375rem;
-  border-radius: .75rem;
-  display: flex;
-  justify-content: space-between;
-  column-gap: .5rem;
-}
+/* =============== FILTERS TABS =============== */
 
 .filters__button {
   width: 100%;
@@ -304,10 +318,10 @@ body.dark-theme {
   font-size: var(--small-font-size);
   font-family: var(--body-font);
   font-weight: 500;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   cursor: pointer;
   background-color: transparent;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .filters__button:hover {
@@ -315,7 +329,7 @@ body.dark-theme {
 }
 
 
-/*=============== PROJECTS ===============*/
+/* =============== PROJECTS =============== */
 .projects__card {
   position: relative;
   border-radius: 1rem;
@@ -333,13 +347,16 @@ body.dark-theme {
   height: 100%;
   bottom: -100%;
   left: 0;
-  background: linear-gradient(180deg,
-  hsla(var(--hue), 24%, 40%, .3) 0%,
-  hsla(var(--hue), 24%, 4%, 1) 95%);
+  background:
+    linear-gradient(
+      180deg,
+      hsla(var(--hue), 24%, 40%, 0.3) 0%,
+      hsla(var(--hue), 24%, 4%, 1) 95%
+    );
   display: grid;
   align-items: flex-end;
   padding: 1.5rem 1.25rem;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .projects__modal i {
@@ -357,18 +374,18 @@ body.dark-theme {
 
 .projects__title {
   font-size: var(--h3-font-size);
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .projects__button {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .projects__card:hover .projects__modal {
   bottom: 0;
 }
 
-/*=============== SKILLS ===============*/
+/* =============== SKILLS =============== */
 .skills__content {
   row-gap: 3.5rem;
 }
@@ -393,7 +410,7 @@ body.dark-theme {
 
 .skills__data {
   display: flex;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
 .skills__data i {
@@ -426,7 +443,7 @@ body.dark-theme {
   color: var(--text-color-light);
 }
 
-/*=============== TESTIMONIAL ===============*/
+/* =============== TESTIMONIAL =============== */
 
 .section__title {
   text-align: center;
@@ -453,7 +470,7 @@ body.dark-theme {
 .testimonial__name {
   font-size: var(--normal-font-size);
   font-weight: 500;
-  margin-bottom: .23rem;
+  margin-bottom: 0.23rem;
 }
 
 .testimonial__description {
@@ -461,7 +478,7 @@ body.dark-theme {
   width: 80%;
 }
 
-/*=============== FOOTER ===============*/
+/* =============== FOOTER =============== */
 .footer__copy {
   display: block;
   margin: 2.5rem 0 2rem;
@@ -469,23 +486,14 @@ body.dark-theme {
   font-size: var(--smaller-font-size);
 }
 
-/*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar {
-  width: .6rem;
-  border-radius: .5rem;
-  background-color: hsl(var(--hue), 8%, 66%);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: .5rem;
-  background-color: hsl(var(--hue), 8%, 54%);
-}
+/* =============== SCROLL BAR =============== */
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--hue), 8%, 44%);
 }
 
-/*=============== BREAKPOINTS ===============*/
+/* =============== BREAKPOINTS =============== */
+
 /* For small devices */
 @media screen and (max-width: 320px) {
   .container {
@@ -545,6 +553,7 @@ body.dark-theme {
     margin-left: auto;
     margin-right: auto;
   }
+
   .change-theme {
     top: 2.5rem;
     right: 2.5rem;
