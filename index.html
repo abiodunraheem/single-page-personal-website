@@ -4,130 +4,410 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3..0.6/css/line.css">
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
         
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
-        
-        <!--==================== CSS ====================-->
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Single Page Personal Website</title>
-
-        <!--==================== Font Awesome Icons ====================-->
-        <link    rel="stylesheet"    href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"    />    <link    rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <title>Portfolio Website With HTML, CSS and JavaScript</title>
     </head>
     <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="" class="nav__logo">Abiodun</a>
+        <!--=============== HEADER PROFILE ===============-->
+        <header class="profile container">
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+            <div class="profile__container grid">
+                <div class="profile__data">
+                    <div class="profile__border">
+                        <div class="profile__perfil">
+                            <img src="assets/img/perfil.jpeg" alt="">
+                        </div>
+                    </div>
 
-                <div class="nav__menu" id="nav__menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link">
-                                <i class="fa fa-home nav__icon" aria-hidden="true"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="fa fa-user-circle-o nav__icon" aria-hidden="true"></i></i> About
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="fa fa-file-text nav__icon" aria-hidden="true"></i> Skills
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="fa fa-briefcase nav__icon" aria-hidden="true"></i> Services
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="fa fa-envelope-open nav__icon" aria-hidden="true"></i> Portfolio
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="fa fa-commenting nav__icon" aria-hidden="true"></i> Contact Me
-                            </a>
-                        </li>
+                    <h2 class="profile__name">Raheem Abiodun</h2>
+                    <h3 class="profile__profession">web developer</h3>
+
+                    <ul class="profile__social">
+                        <a href="https://twitter.com/abiodunraheem23" target="_blank" class="profile__social-link">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abiodun-raheem" target="_blank" class="profile__social-link">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                        <a href="https://github.com/Abiodunraheem" target="_blank" class="profile__social-link">
+                            <i class="ri-github-line"></i>
+                        </a>
+                        <a href="https://medium.com/@raheemabiodun23" target="_blank" class="profile__social-link">
+                            <i class="ri-medium-line"></i>
+                        </a>
                     </ul>
-                    <i class="fa fa-times nav__close" id="nav__close" aria-hidden="true"></i>
                 </div>
 
-                <div class="nav__btns">
-                    <div class="nav__toggle" id="nav__toggle">
-                        <i class="fa fa-external-link-square" aria-hidden="true"></i>
+                <div class="profile__info grid">
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">2</h3>
+                        <p class="profile__info-description">Years of <br> experience</p>
+                    </div>
+
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">+64</h3>
+                        <p class="profile__info-description">Completed <br> projects</p>
+                    </div>
+
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">36</h3>
+                        <p class="profile__info-description">Satisfied <br> clients</p>
                     </div>
                 </div>
-            </nav>
+
+                <div class="profile__buttons">
+                    <a download="" href="assets/pdf/Abiodun-Cv.pdf" class="button">
+                        Download CV <i class="ri-download-line"></i>
+                    </a>
+
+                    <div class="profile__buttons-small">
+                        <a href="https://api.whatsapp.com/send?phone=+2348060165838" target="_blank" class="button button__small">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+
+                        <a href="https://m.me/abiodunraheem" target="_blank" class="button button__small">
+                            <i class="ri-messenger-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <!--==================== MAIN ====================-->
+        <!--=============== MAIN ===============-->
         <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
+            <section class="filters container">
+                <!--=============== FILTERS TABS ===============-->
+                <ul class="filters__content">
+                    <button class="filters__button filter-tab-active" data-target="#projects">
+                        Projects
+                    </button>
+                    <button class="filters__button" data-target="#skills">
+                        Skills
+                    </button>
+                </ul>
+
+                <div class="filters__sections">
+                    <!--=============== PROJECTS ===============-->
+                    <div class="projects__content grid filters__active" data-content id="projects">
+                        <article class="projects__card">
+                            <img src="assets/img/project1.jpeg" alt="project1" class="projects__img">
+                            <div class="projects__modal">
+                                <div>
+                                    <h2 class="projects__subtitle">CMS Bookstore</h2>
+                                    <p class="projects__title">
+                                        Book Store is an application that allow users to 
+                                        keep track of books leaving, and coming into the store.
+                                    </p>
+                                    <a href="https://react-redux-books.netlify.app/" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                    <a href="https://github.com/abiodunraheem/book-store" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-github-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="assets/img/project2.png" alt="project2" class="projects__img">
+                            <div class="projects__modal">
+                                <div>
+                                    <h2 class="projects__subtitle">Space Travelers</h2>
+                                    <p class="projects__title">
+                                        Space travelers hub is a project
+                                        which allows travelers to book reservations to outer space.
+                                    </p>
+                                    <a href="https://space-travelerz.netlify.app/" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                    <a href="https://github.com/abiodunraheem/space-travelers-hub" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-github-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="assets/img/project3.png" alt="project3" class="projects__img">
+                            <div class="projects__modal">
+                                <div>
+                                    <h2 class="projects__subtitle">Portfolio With React.JS</h2>
+                                    <p class="projects__title">
+                                        Abiodun react Portfolio 
+                                        was built to showcase my skills, experience, 
+                                        and biodata to potential employers.
+                                    </p>
+                                    <a href="https://abiodun-portfolio.netlify.app/" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                    <a href="https://github.com/abiodunraheem/abiodun-react-portfolio" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-github-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="assets/img/project4.jpeg" alt="project4" class="projects__img">
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Abiodun Leader Board</span>
+                                    <p class="projects__title">
+                                        Abiodun Leader Board is a game that returns the highest 
+                                        scores each time the game is played.
+                                    </p>
+                                    <a href="https://abiodunraheem.github.io/Abiodun-LeaderBoard/" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                    <a href="https://github.com/abiodunraheem/Abiodun-LeaderBoard" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-github-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="assets/img/project5.jpeg" alt="project5" class="projects__img">
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Silverbird Cinemas</span>
+                                    <p class="projects__title">
+                                        Silverbird Cinemas is an application that gives users 
+                                        access to keep track of their favorite movies.
+                                    </p>
+                                    <a href="https://abiodunraheem.github.io/Silverbird-Cinemas/" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                    <a href="https://github.com/abiodunraheem/Silverbird-Cinemas" target="_blank" class="projects__button button button__small">
+                                        <i class="ri-github-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!--=============== SKILLS ===============-->
+                    <div class="skills__contents grid" data-content id="skills">
+                        <div class="skills__area">
+                            <h3 class="skills__title">
+                                Frontend developer
+                            </h3>
+
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">HTML</h3>
+                                            <span class="skills__level">Experienced</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">CSS</h3>
+                                            <span class="skills__level">Advanced</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">JavaScript</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">React</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Bootstrap</h3>
+                                            <span class="skills__level">Advanced</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Git</h3>
+                                            <span class="skills__level">Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__area">
+                            <h3 class="skills__title">
+                                Backend developer
+                            </h3>
+
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Rails</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Node.JS</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">MongoDB</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Ruby</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Express</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Python</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-
-            </section>
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
-
-            </section>
-
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-            </section>
-
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                
-            </section>
-
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-
-            </section>
-
-            <!--==================== TESTIMONIAL ====================-->
             <section class="testimonial section">
-                
-            </section>
+                <h2 class="section__title">Testimonial</h2>
 
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
+                <div class="testimonial__container container">
+                    <div class="testimonial__card">
+                        <img src="assets/img/bizip.jpeg" alt="testimonial1" class="testimonial__img">
 
+                        <h3 class="testimonial__name">Pascal</h3>
+                        <p class="testimonial__description">
+                            Excellen service, quick response, 
+                            efficient troubleshooting and resolution 
+                            with full explanation of the problem. 
+                            I always rave over your high standards 
+                            that you have maintained over the years.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <img src="assets/img/olive.jpeg" alt="testimonial2" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Olive</h3>
+                        <p class="testimonial__description">
+                            It has been a pleasure working with you 
+                            and your team, you guys are fantastic, 
+                            thank you for being there always.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <img src="assets/img/blessing.JPG" alt="testimonial3" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Blessing</h3>
+                        <p class="testimonial__description">
+                            Always dependable, reliable and fast, even after I leave 
+                            for the day, I can always count on you guys to get 
+                            the job done. Thank you!
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <img src="assets/img/sandra.JPG" alt="testimonial4" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Pascal</h3>
+                        <p class="testimonial__description">
+                            The custom reports you wrote have been very helpful. 
+                            I appreciate every bit of your effort, 
+                            you even gave me a deep insight on how to write. 
+                            I look forward to writing programs for you one of these days.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card">
+                        <img src="assets/img/abiodun.jpg" alt="testimonial5" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Abiodun</h3>
+                        <p class="testimonial__description">
+                            The custom reports you wrote have been very helpful. 
+                            I appreciate every bit of your effort, 
+                            you even gave me a deep insight on how to write. 
+                            I look forward to writing programs for you one of these days.
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-         
+        <!--=============== FOOTER ===============-->
+        <footer class="footer container">
+            <span class="footer__copy">
+                &#169; Abiodun Raheem. All rights reserved
+            </span>
         </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
 
-        <!--==================== SWIPER JS ====================-->
+        <!--=============== SCROLLREVEAL ===============-->
         <script src=""></script>
 
-        <!--==================== MAIN JS ====================-->
+        <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>

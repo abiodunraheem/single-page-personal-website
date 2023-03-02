@@ -2,42 +2,28 @@
 
 # PERSONAL PORTFOLIO
 
+> A "portfolio" HTML-5 & CSS3 repository built during the portal learning module.
 
-This project was built using HTML, and CSS JavaScript.
-
-It is a shows my understanding of Gitflow, use of Linters, semantics, CSS3 flexbox, and figma.
+It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CSS3 flexbox and figma.
 
 ## Built With
 
+- HTML-5
 - CSS3
-- JavacriptReact
-- HTML
+- Javacript
 - Linters
+- Figma
+- Formspree - form data handler
 
 ## Live Demo
-[Live Demo Link](https://)
+Live site URL to portfolio
+[Live Demo Link](https://abiodunraheem.github.io/single-page-personal-website/)
 
 
 ## Getting Started
-To get a local copy up and running follow these simple example steps.
 
-In your terminal, navigate to your current directory and run this code
 
-`https://github.com/abiodunraheem/single-page-personal-website`
-
-Locate the directory in your file explorer
-
-`cd single-page-personal-website`
-
-Install all packages and dependencies using:
-
-`bundle install`
-
-Start the web dev server depending on your configuration
-
-`start with live server`
-
-The Project should now be live on your browser
+- To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -50,7 +36,16 @@ The Project should now be live on your browser
 ### Install
 
 - Open your command prompt or terminal and run.
-- git clone git@github.com:abiodunraheem/single-page-personal-website.git.
+- git clone git@github.com:abiodunraheem/single-page-personal-website.git .
+
+
+### Run tests
+
+- To run tests run :
+- npx hint .
+- npx stylelint "**/*.{css,scss}"
+
+### Deployment
 
 - Project is deployed using
 - git push <branch_name>
@@ -74,6 +69,10 @@ Feel free to check the [issues page](https://github.com/abiodunraheem/single-pag
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+Major thanks to [Jonathan Sivahera](https://twitter.com/jsivahera)
+
 
 ## 📝 License
 
